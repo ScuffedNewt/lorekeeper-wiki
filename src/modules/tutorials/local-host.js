@@ -1,20 +1,17 @@
-
 // local host tutorial
 
 let config = {};
 
-config["key"] = "local-host";
-config["title"] = "Local Host";
-config["authors"] = [
-    ["Newt", "https://github.com/ne-wt"]
-] 
-config["contents"] = [
-    ["Introduction", "/tutorials/local-host#introduction"],
-    ["Install/Initial Setup", "/tutorials/local-host#install-initial-setup"],
-    ["Lorekeeper Setup", "/tutorials/local-host#lorekeeper-setup"],
-]
+config['key'] = 'local-host';
+config['title'] = 'Local Host';
+config['authors'] = [['Newt', 'https://github.com/ne-wt']];
+config['contents'] = [
+	['Introduction', '#introduction'],
+	['Install/Initial Setup', '#install-initial-setup'],
+	['Lorekeeper Setup', '#lorekeeper-setup']
+];
 
-let description = /*html*/`
+let description = /*html*/ `
     <h5 class="alert alert-warning">NOTE THAT THIS IS FOR A WINDOWS BASED SETUP</h5>
     <div class="p-2" id="introduction">
         <p>

@@ -3,7 +3,7 @@
 	import Footer from '../../components/Footer.svelte';
 	import BackButton from '../../components/BackButton.svelte';
 
-	const files = import.meta.glob('../../modules/extensions/*.js');
+	const files = import.meta.glob('../../modules/users/*.js');
 
 	let file_dict = {};
 
@@ -33,16 +33,19 @@
 
 <BackButton />
 <div class="container mt-3">
-	<h1>Extensions</h1>
+	<h1>Users</h1>
 	<div class="container">
-		<p>Here is a list of current extensions for the Lorekeeper framework.</p>
+		<p>
+			Here is a list of users who have contributed to the Lorekeeper framework or the Lorekeeper
+			wiki.
+		</p>
 		<hr class="w-50 mx-auto" />
 		{#each Object.keys(file_dict) as letter}
 			<h2>{letter}</h2>
 			<ul>
 				{#each file_dict[letter] as file}
 					<li>
-						<a href="/extensions/{file.key}">{file.name}</a>
+						<a href="/users/{file.key}">{file.name}</a>
 					</li>
 				{/each}
 			</ul>
@@ -50,7 +53,7 @@
 		<p />
 		<div class="text-muted text-center">
 			<small>
-				{Object.keys(file_dict).length} extensions found.
+				{Object.keys(file_dict).length} users found.
 			</small>
 		</div>
 	</div>

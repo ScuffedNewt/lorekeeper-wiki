@@ -1,12 +1,12 @@
 [
-    {
-        "name": "Newt",
-        "url": "https://github.com/Ne-wt",
-        "contribution": "Created initial Svelte template for this project, and helped with the initial setup of the project. Extension Developer."
-    },
-    {
-        "name": "Wisparia",
-        "url": "https://github.com/wisparia",
-        "contribution": "Extension Developer."
-    }
+	{
+		"name": "Newt",
+		"url": "https://github.com/Ne-wt",
+		"contribution": "Created initial Svelte template for this project, and helped with the initial setup of the project. Extension Developer."
+	},
+	{
+		"name": "Wisparia",
+		"url": "https://github.com/wisparia",
+		"contribution": "Extension Developer."
+	}
 ]

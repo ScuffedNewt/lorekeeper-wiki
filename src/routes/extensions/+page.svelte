@@ -3,22 +3,22 @@
     import Footer from '../../components/Footer.svelte';
     import BackButton from "../../components/BackButton.svelte";
 
-    const files = import.meta.glob("../../extensions/*.json");
+    const files = import.meta.glob("../../extensions/*.js");    
 
     let file_dict = {};
 
     for (const modulePath in files) {
-        files[modulePath]().then(({ default: file }) => {
-            // get first letter of file name
-            const first_letter = file.name[0].toUpperCase();
-            // check if key exists
-            if (file_dict[first_letter]) {
-                // if it does, append to array
-                file_dict[first_letter].push(file);
-            } else {
-                // if it doesn't, create array
-                file_dict[first_letter] = [file];
-            }
+        const name = modulePath.split("/").pop().split(".")[0];
+        const letter = name[0].toUpperCase();
+        if (!(letter in file_dict)) {
+            file_dict[letter] = [];
+        }
+        file_dict[letter].push({
+            key: name,
+            name: name
+                .split("-")
+                .map((word) => word[0].toUpperCase() + word.slice(1))
+                .join(" "),
         });
     }
 
@@ -47,6 +47,11 @@
                 </ul>
             {/each}
         <p>
+        <div class="text-muted text-center"> 
+            <small>
+                {Object.keys(file_dict).length} extensions found.
+            </small>
+        </div>
     </div>
     <Footer />
 </div>

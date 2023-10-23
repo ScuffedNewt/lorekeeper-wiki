@@ -1,20 +1,14 @@
 <script>
     import { Lightbox } from 'svelte-lightbox';
-    export let key;
-    export let name;
-    export let url;
-    export let description;
-    export let contains;
-    export let commands;
-    export let credits;
-    export let images;
+    export let key, name, url, icon, description, contains, commands, images, credits;
 </script>
 <h3>
-    <a href="{url}" target="_blank">{name}</a>
+    <a href="{url}" target="_blank"><i class="{icon} mr-1"></i>{name}</a>
 </h3>
 <p>
-    {#each description as line}
-        {line}<br />
+    <!-- render the newlines in description -->
+    {#each description.split('\n') as line}
+        {@html line}
     {/each}
 </p>
 <hr class="mb-2">
@@ -56,7 +50,7 @@
     <ul>
         {#each credits as credit}
             <li style="list-style:none;">
-                <a href="{credit[1]}">{credit[0]}</a>
+                <a href="{credit[1]}" target="_blank">{credit[0]}</a>
             </li>
         {/each}
     </ul>

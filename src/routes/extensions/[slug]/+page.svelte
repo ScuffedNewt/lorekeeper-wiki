@@ -8,14 +8,15 @@
 <BackButton />
 <div class="container mt-3">
     <Extension
-        key={data.key}
-        name={data.name}
-        url={data.url}
+        key={data.config.key}
+        name={data.config.name}
+        url={data.config.url}
+        icon={data.config.icon}
         description={data.description}
-        contains={data.contains}
-        commands={data.commands}
-        images={data.images}
-        credits={data.credits}
+        contains={data.config.contains}
+        commands={data.config.commands}
+        images={data.config.images}
+        credits={data.config.credits}
     />
 </div>
 <Footer />

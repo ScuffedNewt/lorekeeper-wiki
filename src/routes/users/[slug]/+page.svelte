@@ -24,9 +24,9 @@
 			<div style="display:flex;">
 				{#each data.config.urls as url}
 					{#if typeof url[2] != 'undefined'}
-						<div class="me-2" data-toggle="tooltip" data-placement="top" title="{url[0]}" >
+						<div class="me-2" data-toggle="tooltip" data-placement="top" title={url[0]}>
 							<a href={url[1]} target="_blank">
-								<i class="{url[2]} fa-lg"/>
+								<i class="{url[2]} fa-lg" />
 							</a>
 						</div>
 					{:else}
@@ -44,15 +44,15 @@
 			<h5 class="mb-3">Extensions</h5>
 			<ul>
 				<div class="row">
-				{#each data.extensions as extension}
-					<div class="col-md-6">
-						<li>
-							<a href="/extensions/{extension.key}">
-								{extension.name}
-							</a>
-						</li>
-					</div>
-				{/each}
+					{#each data.extensions as extension}
+						<div class="col-md-6">
+							<li>
+								<a href="/extensions/{extension.key}">
+									{extension.name}
+								</a>
+							</li>
+						</div>
+					{/each}
 				</div>
 			</ul>
 		</div>

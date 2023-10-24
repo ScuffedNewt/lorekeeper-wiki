@@ -16,7 +16,7 @@ export async function load({ params }) {
 
 	// get all extensions made by this user
 	// iterate through all extensions, and find the ones that have this user as an author
-	const files = Object.entries(import.meta.glob('../../../modules/extensions/*.js'))
+	const files = Object.entries(import.meta.glob('../../../modules/extensions/*.js'));
 	// async iterate over files and import
 	const extensions = [];
 	for await (const [path] of files) {

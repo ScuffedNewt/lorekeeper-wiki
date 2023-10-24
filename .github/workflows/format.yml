@@ -6,25 +6,25 @@ on:
       - '**'
 
 jobs:
-    blade-formatter:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v2
-              with:
-                ref: ${{ github.head_ref }}
+  blade-formatter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
 
-            - name: Use Node.js 16.x
-              uses: actions/setup-node@v3
-              with:
-                node-version: 16.x
-                cache: 'npm'
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: 'npm'
 
-            - name: Install packages
-              run: npm install
+      - name: Install packages
+        run: npm install
 
-            - name: Run prettier
-              run: npm run format
+      - name: Run prettier
+        run: npm run format
 
-            - uses: stefanzweifel/git-auto-commit-action@v4
-              with:
-                  commit_message: 'refactor: fix formatting'
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'refactor: fix formatting'

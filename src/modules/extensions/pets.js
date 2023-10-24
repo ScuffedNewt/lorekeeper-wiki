@@ -4,10 +4,13 @@ let config = {};
 
 config['key'] = 'pets';
 config['name'] = 'Pets';
-(config['url'] = 'https://github.com/Ne-wt/lorekeeper/tree/extension/pets'),
-	(config['icon'] = 'fas fa-paw');
+config['url'] = 'https://github.com/Ne-wt/lorekeeper/tree/extension/pets';
+config['icon'] = 'fas fa-paw';
 config['commands'] = ['php artisan migrate', 'php artisan add-site-settings'];
-config['images'] = ['variants.png'];
+config['images'] = [
+    'variants.png',
+    'pet_page.png'
+];
 config['credits'] = [
 	['Newt', 'https://github.com/ne-wt'],
 	['Uri', 'https://github.com/preimpression'],

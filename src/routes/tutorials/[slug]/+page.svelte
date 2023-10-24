@@ -2,6 +2,19 @@
 	import Footer from '../../../components/Footer.svelte';
 	import BackButton from '../../../components/BackButton.svelte';
 	export let data;
+
+	// check credits if they have a wiki link also
+	if (data.config.authors) {
+		const files = import.meta.glob('../modules/users/*.js');
+		data.config.authors = data.config.authors.map((item) => {
+			const key = item[0].toLowerCase().replace(' ', '-');
+			if (files[`../modules/users/${key}.js`]) {
+				return [item[0], `/users/${key}`];
+			} else {
+				return item;
+			}
+		});
+	}
 </script>
 
 <BackButton />
@@ -13,7 +26,7 @@
 			by
 			{#each data.config.authors as author}
 				<a href={author[1]} target="_blank" rel="noopener noreferrer">
-					{author[0]}
+					{author[0]}{#if data.config.authors[data.config.authors.length - 1] != author}, {/if}
 				</a>
 			{/each}
 		</span>

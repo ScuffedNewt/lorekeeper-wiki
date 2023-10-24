@@ -14,7 +14,7 @@
 </script>
 
 <div class="w-100">
-	<div class="row">
+	<div class="row col-12">
 		<div class="col-lg" />
 		<div class="col-lg-10 bg-light app">
 			<div class="main-content p-4">

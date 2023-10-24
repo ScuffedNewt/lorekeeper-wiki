@@ -4,8 +4,8 @@ let config = {};
 
 config['key'] = 'claymores-and-companions';
 config['name'] = 'Claymores and Companions';
-(config['url'] = 'https://github.com/Ne-wt/lorekeeper/tree/extension/claymores-and-companions'),
-	(config['icon'] = 'fas fa-sword');
+config['url'] = 'https://github.com/Ne-wt/lorekeeper/tree/extension/claymores-and-companions';
+config['icon'] = 'fas fa-shield-alt';
 config['contains'] = [
 	['Pets', 'https://github.com/Ne-wt/lorekeeper/tree/extension/pets'],
 	['Levels & Stats', 'https://github.com/Ne-wt/lorekeeper/tree/extension/levels+stats'],

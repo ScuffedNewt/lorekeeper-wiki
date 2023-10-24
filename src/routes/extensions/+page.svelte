@@ -39,6 +39,7 @@
 		<hr class="w-50 mx-auto" />
 		{#each Object.keys(file_dict) as letter}
 			<h2>{letter}</h2>
+			<hr style="width: 2vw;" />
 			<ul>
 				{#each file_dict[letter] as file}
 					<li>

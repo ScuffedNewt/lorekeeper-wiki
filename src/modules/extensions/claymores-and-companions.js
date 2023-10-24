@@ -5,6 +5,7 @@ let config = {};
 config['key'] = 'claymores-and-companions';
 config['name'] = 'Claymores and Companions';
 config['url'] = 'https://github.com/Ne-wt/lorekeeper/tree/extension/claymores-and-companions';
+config['version'] = '1.0.0';
 config['icon'] = 'fas fa-shield-alt';
 config['contains'] = [
 	['Pets', 'https://github.com/Ne-wt/lorekeeper/tree/extension/pets'],

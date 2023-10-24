@@ -5,10 +5,10 @@
 
 	// check credits if they have a wiki link also
 	if (data.config.authors) {
-		const files = import.meta.glob('../modules/users/*.js');
+		const files = import.meta.glob('../../../modules/users/*.js');
 		data.config.authors = data.config.authors.map((item) => {
 			const key = item[0].toLowerCase().replace(' ', '-');
-			if (files[`../modules/users/${key}.js`]) {
+			if (files[`../../../modules/users/${key}.js`]) {
 				return [item[0], `/users/${key}`];
 			} else {
 				return item;

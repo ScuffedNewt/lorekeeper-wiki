@@ -1,6 +1,6 @@
 <script>
 	import { Lightbox } from 'svelte-lightbox';
-	export let key, name, url, icon, description, contains, commands, images, credits;
+	export let key, name, version, url, icon, description, contains, commands, images, credits;
 
 	// check if any extensions from contains are in the list of extensions
 	// if so, link their wiki page
@@ -31,7 +31,7 @@
 </script>
 
 <h3>
-	<a href={url} target="_blank"><i class="{icon} me-1" />{name}</a>
+	<a href={url} target="_blank"><i class="{icon} me-1" />{name}</a>{#if version} <small class="text-muted ms-2"><small> - v{version}</small></small>{/if}
 </h3>
 <p>
 	<!-- render the newlines in description -->

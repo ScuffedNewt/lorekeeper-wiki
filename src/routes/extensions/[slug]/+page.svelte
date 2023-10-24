@@ -11,6 +11,7 @@
 		key={data.config.key}
 		name={data.config.name}
 		url={data.config.url}
+		version={data.config.version}
 		icon={data.config.icon}
 		description={data.description}
 		contains={data.config.contains}

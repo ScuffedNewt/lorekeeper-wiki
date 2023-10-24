@@ -5,8 +5,8 @@ let config = {};
 config['key'] = 'local-host';
 config['title'] = 'Local Host';
 config['authors'] = [
-    ['Newt', 'https://github.com/ne-wt'],
-    ['Mercury', 'https://github.com/itinerare']
+	['Newt', 'https://github.com/ne-wt'],
+	['Mercury', 'https://github.com/itinerare']
 ];
 config['contents'] = [
 	['Introduction', '#introduction'],

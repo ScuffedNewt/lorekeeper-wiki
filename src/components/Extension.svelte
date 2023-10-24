@@ -31,7 +31,8 @@
 </script>
 
 <h3>
-	<a href={url} target="_blank"><i class="{icon} me-1" />{name}</a>{#if version} <small class="text-muted ms-2"><small> - v{version}</small></small>{/if}
+	<a href={url} target="_blank"><i class="{icon} me-1" />{name}</a>{#if version}
+		<small class="text-muted ms-2"><small> - v{version}</small></small>{/if}
 </h3>
 <p>
 	<!-- render the newlines in description -->
